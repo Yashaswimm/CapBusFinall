@@ -1,8 +1,10 @@
 import { useState } from "react";
+import Confetti from "react-confetti";
 
 export const RouteStopsModal = ({ route, bus, onClose, onLocationUpdate }) => {
   let [selectedStops, setSelectedStops] = useState([]);
   let [nextStop, setNextStop] = useState(route.routeStops[0]);
+  let [showConfetti, setShowConfetti] = useState(false); // State to trigger confetti
 
   function handleChangeStop(stop) {
     console.log(stop);
@@ -14,12 +16,19 @@ export const RouteStopsModal = ({ route, bus, onClose, onLocationUpdate }) => {
     setNextStop(nextStop);
     setSelectedStops([...selectedStops, stop]);
     onLocationUpdate(stop);
+
+    // Trigger confetti if the last stop is reached
+    if (selectedStops.length + 1 === route.routeStops.length) {
+      setShowConfetti(true);
+      setTimeout(() => setShowConfetti(false), 20000); // Stop confetti after 3 seconds
+    }
   }
 
   console.log("selectedStops:", selectedStops);
   console.log("nextStop:", nextStop);
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+      {showConfetti && <Confetti width={window.innerWidth} height={window.innerHeight} />} {/* Confetti animation */}
       <div className="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-hidden">
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center justify-between">
@@ -43,7 +52,6 @@ export const RouteStopsModal = ({ route, bus, onClose, onLocationUpdate }) => {
                 From: {route.routeSource}
               </span>
             </div>
-            
           </div>
 
           <div className="space-y-4">
@@ -69,16 +77,17 @@ export const RouteStopsModal = ({ route, bus, onClose, onLocationUpdate }) => {
                 </span>
               </div>
             ))}
-          </div> 
+          </div>
           <div className="flex items-center space-x-2">
-              <span className="text-red-600">&#128205;</span>{" "}
-              {/* Map Pin Emoji for "To" */}
-               
-                To: {route.routeDestination}
-                
-              
-              <span className="text-lg text-green-600">Reached Final Destination!!!!!</span>
-            </div>
+            <span className="text-red-600">&#128205;</span>{" "}
+            {/* Map Pin Emoji for "To" */}
+            To: {route.routeDestination}
+            {selectedStops.length === route.routeStops.length && (
+              <span className="text-lg text-green-600">
+                Reached Final Destination!!!!!
+              </span>
+            )}
+          </div>
         </div>
       </div>
     </div>
