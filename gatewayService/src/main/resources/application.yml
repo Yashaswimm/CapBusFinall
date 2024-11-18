@@ -1,0 +1,57 @@
+# change localhost with respective containers
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8222
+spring:
+  application:
+    name: gatewayService
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+#        - id: discoveryService
+#          uri: http://localhost:8761
+#          predicates:
+#            - Path=/eureka/**
+
+        - id: admin-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/admin/**
+          filters:
+            -AuthenticationFilter
+
+        - id: bus-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/buses/**
+          filters:
+            -AuthenticationFilter
+
+        - id: route-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/routes/**
+          filters:
+            -AuthenticationFilter
+
+        - id: passenger-service
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/passengers/**
+          filters:
+            -AuthenticationFilter
+
+        - id: auth-service
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/auth/**
+
+
+
