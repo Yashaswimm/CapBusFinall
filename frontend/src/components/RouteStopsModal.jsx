@@ -22,12 +22,12 @@ export const RouteStopsModal = ({ route, bus, onClose, onLocationUpdate }) => {
     // Trigger confetti if the last stop is reached
     if (selectedStops.length + 1 === route.routeStops.length) {
       setShowConfetti(true);
-      setTimeout(() => setShowConfetti(false), 5000); // Confetti duration: 5 seconds
+      setTimeout(() => setShowConfetti(false), 20000); // Confetti duration: 5 seconds
     }
   }
 
   function handleLogout() {
-    navigate('/'); // Navigate to home page
+    navigate("/"); // Navigate to home page
   }
 
   console.log("selectedStops:", selectedStops);
@@ -35,7 +35,10 @@ export const RouteStopsModal = ({ route, bus, onClose, onLocationUpdate }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
-      {showConfetti && <Confetti width={window.innerWidth} height={window.innerHeight} />} {/* Confetti animation */}
+      {showConfetti && (
+        <Confetti width={window.innerWidth} height={window.innerHeight} />
+      )}{" "}
+      {/* Confetti animation */}
       <div className="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-hidden">
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center justify-between">
@@ -86,12 +89,12 @@ export const RouteStopsModal = ({ route, bus, onClose, onLocationUpdate }) => {
             ))}
           </div>
           <div className="flex items-center space-x-2">
-              <span className="text-blue-600">&#128205;</span>{" "}
-              {/* Map Pin Emoji for "From" */}
-              <span className="text-sm text-gray-600">
-                To: {route.routeDestination}
-              </span>
-            </div>
+            <span className="text-blue-600">&#128205;</span>{" "}
+            {/* Map Pin Emoji for "From" */}
+            <span className="text-sm text-gray-600">
+              To: {route.routeDestination}
+            </span>
+          </div>
 
           {/* Final Destination Message with Logout Button */}
           {selectedStops.length === route.routeStops.length && (
