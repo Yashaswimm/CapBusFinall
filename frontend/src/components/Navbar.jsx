@@ -20,6 +20,7 @@ function Navbar() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-900" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17 20c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1m-4 0c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1m-4 0c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1m12-4H3V6c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v10M3 16h18v2c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2v-2m15-7c0-.55-.45-1-1-1h-7c-.55 0-1 .45-1 1s.45 1 1 1h7c.55 0 1-.45 1-1m0-3c0-.55-.45-1-1-1h-7c-.55 0-1 .45-1 1s.45 1 1 1h7c.55 0 1-.45 1-1"/>
               </svg>
+              Home
             </div>
             <div>
               <span className="text-2xl font-bold text-white tracking-wider">BusHub</span>

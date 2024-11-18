@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Confetti from "react-confetti";
+import { useNavigate } from "react-router-dom";
 
 export const RouteStopsModal = ({ route, bus, onClose, onLocationUpdate }) => {
   let [selectedStops, setSelectedStops] = useState([]);
   let [nextStop, setNextStop] = useState(route.routeStops[0]);
   let [showConfetti, setShowConfetti] = useState(false); // State to trigger confetti
+  const navigate = useNavigate(); // React Router navigation
 
   function handleChangeStop(stop) {
     console.log(stop);
@@ -20,12 +22,17 @@ export const RouteStopsModal = ({ route, bus, onClose, onLocationUpdate }) => {
     // Trigger confetti if the last stop is reached
     if (selectedStops.length + 1 === route.routeStops.length) {
       setShowConfetti(true);
-      setTimeout(() => setShowConfetti(false), 20000); // Stop confetti after 3 seconds
+      setTimeout(() => setShowConfetti(false), 5000); // Confetti duration: 5 seconds
     }
+  }
+
+  function handleLogout() {
+    navigate('/'); // Navigate to home page
   }
 
   console.log("selectedStops:", selectedStops);
   console.log("nextStop:", nextStop);
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
       {showConfetti && <Confetti width={window.innerWidth} height={window.innerHeight} />} {/* Confetti animation */}
@@ -79,15 +86,27 @@ export const RouteStopsModal = ({ route, bus, onClose, onLocationUpdate }) => {
             ))}
           </div>
           <div className="flex items-center space-x-2">
-            <span className="text-red-600">&#128205;</span>{" "}
-            {/* Map Pin Emoji for "To" */}
-            To: {route.routeDestination}
-            {selectedStops.length === route.routeStops.length && (
-              <span className="text-lg text-green-600">
+              <span className="text-blue-600">&#128205;</span>{" "}
+              {/* Map Pin Emoji for "From" */}
+              <span className="text-sm text-gray-600">
+                To: {route.routeDestination}
+              </span>
+            </div>
+
+          {/* Final Destination Message with Logout Button */}
+          {selectedStops.length === route.routeStops.length && (
+            <div className="mt-6 text-center">
+              <span className="text-lg text-green-600 block mb-4">
                 Reached Final Destination!!!!!
               </span>
-            )}
-          </div>
+              <button
+                onClick={handleLogout}
+                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+              >
+                Logout
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
