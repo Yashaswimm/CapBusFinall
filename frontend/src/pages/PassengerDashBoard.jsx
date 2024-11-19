@@ -25,7 +25,8 @@ export default function PassengerDashBoard() {
         routesData.forEach(route => {
           route.routeStops.forEach(stop => stops.add(stop)); // Add each stop to the Set to keep them unique
         });
-        setAllStops(Array.from(stops)); // Convert Set to Array and set it to state
+        // Sort stops alphabetically before setting the state
+        setAllStops(Array.from(stops).sort());
       } else {
         toast.error('Error fetching routes');
       }

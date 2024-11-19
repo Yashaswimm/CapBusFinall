@@ -1,6 +1,7 @@
 package com.ust.auth_service.config;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
@@ -27,14 +28,25 @@ public class JwtTokenProvider {
     }
 
     public boolean validateToken(String token) {
+
         try {
-            Jwts.parser().setSigningKey(getSignKey()).parseClaimsJws(token);
+
+            Jwts.parserBuilder()
+
+                    .setSigningKey(getSignKey())
+
+                    .build()
+
+                    .parseClaimsJws(token);
+
             return true;
-        } catch (io.jsonwebtoken.ExpiredJwtException e) {
-            throw new RuntimeException("Token is expired");
-        } catch (Exception e) {
-            throw new RuntimeException("Invalid token");
+
+        } catch (JwtException e) {
+
+            return true;
+
         }
+
     }
 
     public Claims getClaimsFromToken(String token) {

@@ -66,7 +66,7 @@ export default function Login() {
         //sessionStorage.setItem("username", form.username);
 
         // Redirect based on role 
-        navigate(`/profile`)
+       // navigate(`/profile`)
 
         updateRole(data.roles);
 
@@ -76,6 +76,10 @@ export default function Login() {
         if(data.roles=="ADMIN")
         {
           navigate("/admin/dashboard");
+        }
+        if(data.roles=="OPERATOR")
+        {
+          navigate("/operator/dashboard");
         }
       } else {
         console.log("Login failed");

@@ -74,9 +74,12 @@ public class AccountController {
        }
    }
 
-    @GetMapping("/validate/token")
-    public ResponseEntity<Boolean> validateToken(@RequestParam String token) {
-        return ResponseEntity.ok(accountService.verify(token));
+    @GetMapping("/validate-token")
+
+    public boolean validateToken(@RequestParam String token){
+
+        return jwtService.validateToken(token);
+
     }
 
     @GetMapping("/extract/roles")

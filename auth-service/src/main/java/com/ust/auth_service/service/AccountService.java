@@ -119,6 +119,8 @@ public class AccountService {
         // Update the email
         account.setEmail(updateEmailDto.getNewEmail());
         accountRepo.save(account);
+
+
     }
 
 }

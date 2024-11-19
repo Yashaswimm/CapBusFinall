@@ -6,6 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="d96c94f4-bf80-40b9-b282-8dcb4b7ab3a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-service/src/main/java/com/ust/auth_service/config/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-service/src/main/java/com/ust/auth_service/config/JwtTokenProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-service/src/main/java/com/ust/auth_service/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-service/src/main/java/com/ust/auth_service/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-service/src/main/java/com/ust/auth_service/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-service/src/main/java/com/ust/auth_service/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-service/target/classes/com/ust/auth_service/config/JwtTokenProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-service/target/classes/com/ust/auth_service/config/JwtTokenProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-service/target/classes/com/ust/auth_service/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-service/target/classes/com/ust/auth_service/controller/AccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-service/target/classes/com/ust/auth_service/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-service/target/classes/com/ust/auth_service/service/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bus-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bus-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bus-service/src/main/java/com/capstoneproj/bus_service/entity/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bus-service/src/main/java/com/capstoneproj/bus_service/entity/Bus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bus-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../bus-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bus-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../bus-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/PassengerDashBoard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/PassengerDashBoard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../passenger-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../passenger-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../passenger-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../passenger-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../route-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../route-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../route-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../route-service/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,18 +73,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AdminServiceApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Downloads/YashuNewBusRepo/auth-service",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AdminServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Downloads/YashuNewBusRepo/auth-service&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="AdminServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.capstoneproj.admin_service.AdminServiceApplication" />
