@@ -17,7 +17,7 @@ public class Bus {
     private int currentOccupancy;
     private String currentLocation;
     private String routeId;
-    private
+    private String busRegisterationNumber;
     //private String adminId;
     // New field to track occupancy history over stops
     private List<Integer> occupancyHistory = new ArrayList<>();// Stores occupancy for previous stops

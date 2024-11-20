@@ -23,35 +23,35 @@ spring:
         - id: admin-service
           uri: http://localhost:8081
           predicates:
-            - Path=/api/admin/**
+            - Path= /api/admin/**
           filters:
-            -AuthenticationFilter
+            - AuthenticationFilter
 
         - id: bus-service
           uri: http://localhost:8082
           predicates:
-            - Path=/api/buses/**
+            - Path= /api/buses/**
           filters:
-            -AuthenticationFilter
+            - AuthenticationFilter
 
         - id: route-service
           uri: http://localhost:8083
           predicates:
-            - Path=/api/routes/**
+            - Path= /api/routes/**
           filters:
-            -AuthenticationFilter
+            - AuthenticationFilter
 
         - id: passenger-service
           uri: http://localhost:8084
           predicates:
-            - Path=/api/passengers/**
+            - Path= /api/passengers/**
           filters:
-            -AuthenticationFilter
+            - AuthenticationFilter
 
         - id: auth-service
           uri: http://localhost:8085
           predicates:
-            - Path=/api/auth/**
+            - Path= /api/auth/**
 
 
 

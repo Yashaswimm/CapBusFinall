@@ -45,6 +45,9 @@ function BusOperatorDashboard() {
     }
   };
 
+  // Get the first bus from the array
+  const firstBus = buses?.[0] || null;
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -61,14 +64,15 @@ function BusOperatorDashboard() {
           <h1 className="text-2xl font-bold text-gray-900">Bus Operator Dashboard</h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {buses?.map((bus, index) => (
+        {/* Render only the first bus */}
+        <div className="grid grid-cols-1 gap-6">
+          {firstBus && (
             <BusCard
-              key={bus.busId || index} // Use index as a fallback if busId is undefined
-              bus={bus}
-              onViewRoute={() => handleViewRoute(bus)}
+              key={firstBus.busId}
+              bus={firstBus}
+              onViewRoute={() => handleViewRoute(firstBus)}
             />
-          ))}
+          )}
         </div>
 
         {selectedBus && selectedRoute && (

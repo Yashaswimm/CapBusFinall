@@ -164,25 +164,37 @@ export default function PassengerDashBoard() {
 
       {buses.length > 0 && (
         <Card>
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">Available Buses</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {buses.map((bus) => (
-              <div key={bus.busId} className="border rounded-lg p-4 shadow-sm">
-                <p><span className="font-medium">Bus ID:</span> {bus.busId}</p>
-                <p><span className="font-medium">Current Location:</span> {bus.currentLocation}</p>
-                <p><span className="font-medium">Available Seats:</span> { bus.currentOccupancy}</p>
-                {!isBoarded && (
-                  <Button 
-                    onClick={() => handleBoard(bus.busId)}
-                    disabled={bus.currentOccupancy >= bus.seatCapacity}
-                  >
-                    Board Bus
-                  </Button>
-                )}
-              </div>
-            ))}
-          </div>
-        </Card>
+        <h3 className="text-xl font-semibold text-gray-800 mb-4">Available Buses</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {buses.map((bus) => (
+            <div key={bus.busId} className="border rounded-lg p-4 shadow-sm">
+              <p><span className="font-medium">Bus ID:</span> {bus.busId}</p>
+              <p>
+                <span className="font-medium">Current Location:</span> 
+                {(() => {
+                  try {
+                    const parsedLocation = JSON.parse(bus.currentLocation)?.currentLocation;
+                    return parsedLocation || bus.currentLocation; // Return parsed value or fallback
+                  } catch (e) {
+                    return bus.currentLocation || "Unknown"; // Fallback for invalid JSON
+                  }
+                })()}
+              </p>
+              <p><span className="font-medium">Available Seats:</span> {bus.currentOccupancy}</p>
+              {!isBoarded && (
+                <Button 
+                  onClick={() => handleBoard(bus.busId)}
+                  disabled={bus.currentOccupancy >= bus.seatCapacity}
+                >
+                  Board Bus
+                </Button>
+              )}
+            </div>
+          ))}
+        </div>
+      </Card>
+      
+      
       )}
 
       {isBoarded && (
