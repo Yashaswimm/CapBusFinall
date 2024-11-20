@@ -30,6 +30,7 @@ public class BusController {
     // Add a new bus
     @PostMapping
     public ResponseEntity<Bus> addBus(@RequestBody Bus bus) {
+
         Bus savedBus = busService.addBus(bus);
         return ResponseEntity.ok(savedBus);
     }

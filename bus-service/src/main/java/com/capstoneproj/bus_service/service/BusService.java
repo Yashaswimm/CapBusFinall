@@ -33,7 +33,7 @@ public class BusService {
 
     // Add a new bus
     public Bus addBus(Bus bus) {
-        //bus.setCurrentOccupancy(bus.getSeatCapacity());
+        bus.setCurrentOccupancy(bus.getSeatCapacity()-1);
         // Initialize occupancy to zero
         return busRepository.save(bus);
     }

@@ -6,14 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d96c94f4-bf80-40b9-b282-8dcb4b7ab3a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bus-service/src/main/java/com/capstoneproj/bus_service/entity/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bus-service/src/main/java/com/capstoneproj/bus_service/entity/Bus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capstoneproj/admin_service/dto/BusDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capstoneproj/admin_service/dto/BusDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/capstoneproj/admin_service/dto/BusDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/capstoneproj/admin_service/dto/BusDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bus-service/src/main/java/com/capstoneproj/bus_service/controller/BusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bus-service/src/main/java/com/capstoneproj/bus_service/controller/BusController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bus-service/src/main/java/com/capstoneproj/bus_service/service/BusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bus-service/src/main/java/com/capstoneproj/bus_service/service/BusService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bus-service/target/classes/com/capstoneproj/bus_service/entity/Bus.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bus-service/target/classes/com/capstoneproj/bus_service/entity/Bus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bus-service/target/classes/com/capstoneproj/bus_service/controller/BusController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bus-service/target/classes/com/capstoneproj/bus_service/controller/BusController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bus-service/target/classes/com/capstoneproj/bus_service/service/BusService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bus-service/target/classes/com/capstoneproj/bus_service/service/BusService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/BusCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/BusCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/BusOperatorDashBoard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/BusOperatorDashBoard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/PassengerDashBoard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/PassengerDashBoard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatewayService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gatewayService/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

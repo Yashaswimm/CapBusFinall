@@ -16,7 +16,7 @@ public class BusDto{
     // Parameterized constructor
     public BusDto(String busId, int seatCapacity, int currentOccupancy, String currentLocation, String routeId, String adminId) {
         this.busId = busId;
-        this.seatCapacity = seatCapacity;
+        //this.seatCapacity = seatCapacity;
         this.currentOccupancy = currentOccupancy;
         this.currentLocation = currentLocation;
         this.routeId = routeId;
@@ -34,11 +34,11 @@ public class BusDto{
 
     public int getSeatCapacity() {
         return seatCapacity;
-    }
+   }
 
     public void setSeatCapacity(int seatCapacity) {
         this.seatCapacity = seatCapacity;
-    }
+   }
 
     public int getCurrentOccupancy() {
         return currentOccupancy;
