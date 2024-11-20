@@ -9,7 +9,7 @@ export default function BusForm({ onSubmit, formData, setFormData, onCancel }) {
         <input
           type="text"
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-          value={formData.busRegisterationNumber}
+          value={formData.busId}
           onChange={(e) => setFormData({ ...formData, busId: e.target.value })}
           required
         />
@@ -25,17 +25,7 @@ export default function BusForm({ onSubmit, formData, setFormData, onCancel }) {
           min="0"
         />
       </div>
-      <div>
-        <label className="block text-sm font-medium text-gray-700">Current Occupancy</label>
-        <input
-          type="number"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-          value={formData.currentOccupancy}
-          onChange={(e) => setFormData({ ...formData, currentOccupancy: parseInt(e.target.value) })}
-          required
-          min="0"
-        />
-      </div>
+      
       <div>
   <label className="block text-sm font-medium text-gray-700">Bus Type</label>
   <select
@@ -45,10 +35,10 @@ export default function BusForm({ onSubmit, formData, setFormData, onCancel }) {
     required
   >
     <option value="Select Bus Type">Select Bus Type</option>
-    <option value="Ashok Leyland">Ashok Leyland</option>
-    <option value="Volvo">Volvo</option>
-    <option value="Mercedes Benz">Mercedes Benz</option>
-    <option value="Tata Motors">Tata Motors</option>
+    <option value="Ashok Leyland">Normal</option>
+    <option value="Volvo">Electric</option>
+    <option value="Mercedes Benz">Electric(AC)</option>
+    {/* <option value="Tata Motors">Tata Motors</option> */}
   </select>
 </div>
      

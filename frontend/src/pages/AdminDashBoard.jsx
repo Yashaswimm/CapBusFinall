@@ -1050,7 +1050,7 @@ export default function AdminDashBoard() {
 
           <div>
 
-           <span className="font-semibold">Route ID:</span>
+           <span className="font-semibold">Route Number:</span>
 
            <div>{route.routeId}</div>
 

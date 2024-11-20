@@ -131,7 +131,9 @@ export default function BusList({
 
          </p>
 
-        </div>
+        </div> 
+
+        
 
         <div className="col-span-2">
 

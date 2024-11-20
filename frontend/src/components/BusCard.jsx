@@ -2,6 +2,18 @@ import React from 'react';
 import { Bus as BusIcon, MapPin } from 'lucide-react';
 
 export const BusCard = ({ bus, onViewRoute }) => {
+  let currentLocation;
+
+  try {
+    // Attempt to parse currentLocation if it's a JSON string
+    currentLocation = typeof bus.currentLocation === 'string' 
+      ? JSON.parse(bus.currentLocation)?.currentLocation 
+      : bus.currentLocation?.currentLocation;
+  } catch {
+    // If parsing fails, set it to a fallback value
+    currentLocation = 'Not set';
+  }
+
   return (
     <div className="bg-[#FEFFA7] rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-center justify-between mb-4">
@@ -19,10 +31,8 @@ export const BusCard = ({ bus, onViewRoute }) => {
       <div className="space-y-2 mb-4">
         <div className="flex items-center space-x-4 text-black-600">
           <MapPin className="w-5 h-5" />
-          <span>CurrentLocation: {JSON.parse(bus.currentLocation)?.currentLocation || 'Not set'}</span>
+          <span>Current Location: {currentLocation || 'Not set'}</span>
         </div>
-        
-        
       </div>
 
       <button
