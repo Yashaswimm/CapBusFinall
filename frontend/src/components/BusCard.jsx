@@ -17,9 +17,9 @@ export const BusCard = ({ bus, onViewRoute }) => {
       </div>
       
       <div className="space-y-2 mb-4">
-        <div className="flex items-center space-x-2 text-black-600">
-          <MapPin className="w-4 h-4" />
-          <span>Current Location: {bus.currentLocation || 'Not set'}</span>
+        <div className="flex items-center space-x-4 text-black-600">
+          <MapPin className="w-5 h-5" />
+          <span>CurrentLocation: {JSON.parse(bus.currentLocation)?.currentLocation || 'Not set'}</span>
         </div>
         
         

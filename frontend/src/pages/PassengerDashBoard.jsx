@@ -147,7 +147,7 @@ export default function PassengerDashBoard() {
         <Card>
           <h3 className="text-xl font-semibold text-gray-800 mb-4">Route Details</h3>
           <div className="space-y-2">
-            <p><span className="font-medium">Route ID:</span> {route.routeId}</p>
+            <p><span className="font-medium">Route Number:</span> {route.routeId}</p>
             <p><span className="font-medium">Source:</span> {route.routeSource}</p>
             <p><span className="font-medium">Destination:</span> {route.routeDestination}</p>
             <div>
@@ -168,7 +168,7 @@ export default function PassengerDashBoard() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {buses.map((bus) => (
             <div key={bus.busId} className="border rounded-lg p-4 shadow-sm">
-              <p><span className="font-medium">Bus ID:</span> {bus.busId}</p>
+              <p><span className="font-medium">Bus Number:</span> {bus.busId}</p>
               <p>
                 <span className="font-medium">Current Location:</span> 
                 {(() => {
