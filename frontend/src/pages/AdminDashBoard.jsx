@@ -458,7 +458,7 @@ export default function AdminDashBoard() {
 
    const response = await fetch(
 
-    `http://localhost:8082/api/buses/setRouteToBus/${busId}/${routeId}`,
+    `http://localhost:8081/api/admin/buses/route?busId=${busId}&routeId=${routeId}`,
 
     {
 
