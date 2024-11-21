@@ -64,7 +64,7 @@ function BusOperatorDashboard() {
           <h1 className="text-2xl font-bold text-gray-900">Bus Operator Dashboard</h1>
         </div>
 
-        {/* Render only the first bus */}
+       
         <div className="grid grid-cols-1 gap-6">
           {firstBus && (
             <BusCard

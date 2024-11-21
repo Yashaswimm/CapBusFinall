@@ -93,7 +93,7 @@ export default function BusList({
 
           <Bus className="w-5 h-5 text-blue-600" />
 
-          Bus Reg Number
+          Bus Number
 
          </h3>
 
@@ -121,7 +121,7 @@ export default function BusList({
 
           <UserCheck className="w-5 h-5 text-blue-600" />
 
-          Occupancy
+          Avl Seats
 
          </h3>
 
@@ -141,7 +141,7 @@ export default function BusList({
 
           <MapPin className="w-5 h-5 text-blue-600" />
 
-          Location
+          Current Loc
 
          </h3>
 

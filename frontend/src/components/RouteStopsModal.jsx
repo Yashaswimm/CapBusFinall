@@ -43,13 +43,7 @@ export const RouteStopsModal = ({ route, bus, onClose, onLocationUpdate }) => {
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold text-gray-800">Route Stops</h2>
-            <button
-              onClick={onClose}
-              className="text-gray-500 hover:text-gray-700"
-            >
-              <span className="w-6 h-6 text-gray-500">X</span>{" "}
-              {/* Close icon as simple text */}
-            </button>
+            
           </div>
         </div>
 
